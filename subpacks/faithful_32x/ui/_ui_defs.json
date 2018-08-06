@@ -1,0 +1,9 @@
+{
+  "ui_defs": [
+    "ui/horse_screen.json",
+    "ui/mob_effect_screen.json",
+    "ui/start_screen.json"
+  ]
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

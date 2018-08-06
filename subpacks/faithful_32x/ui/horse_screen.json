@@ -1,0 +1,13 @@
+{
+  "namespace": "horse",
+
+//  Rendered Horse Background Texture
+//  (Different wallpaper to look like the rendered player background texture)
+
+  "renderer_bg": {
+    "type": "image",
+    "texture": "textures/ui/horse_preview_border"
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

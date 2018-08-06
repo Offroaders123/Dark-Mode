@@ -1,0 +1,45 @@
+{
+  "namespace": "mob_effect",
+
+//  Right Handed Background
+
+  "main_background": {
+    "type": "image",
+    "size": "$mob_effect_screen_size",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -4, 4 ],
+    "texture": "textures/ui/mob_effect_background_right"
+  },
+
+  "button_background": {
+    "type": "image",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ 25, 25 ],
+    "offset": [ "-90%", 4 ],
+    "texture": "textures/ui/mob_effect_tab_left"
+  },
+
+//  Left Handed Background
+
+  "main_background_left_handed": {
+    "type": "image",
+    "size": "$mob_effect_screen_size",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "offset": [ 4, 4 ],
+    "texture": "textures/ui/mob_effect_background_left"
+  },
+
+  "button_background_left_handed": {
+    "type": "image",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 25, 25 ],
+    "offset": [ "90% + 2px", 4 ],
+    "texture": "textures/ui/mob_effect_tab_right"
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.
