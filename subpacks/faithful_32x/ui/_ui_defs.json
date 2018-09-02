@@ -2,6 +2,7 @@
   "ui_defs": [
     "ui/horse_screen.json",
     "ui/mob_effect_screen.json",
+    "ui/settings_sections/world_section.json",
     "ui/start_screen.json"
   ]
 }
