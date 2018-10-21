@@ -1,12 +1,8 @@
 {
   "namespace": "horse",
 
-//  Rendered Horse Background Texture
-//  (Different wallpaper to look like the rendered player background texture)
-
   "renderer_bg": {
-    "type": "image",
-    "texture": "textures/ui/horse_preview_border"
+    "texture": "textures/ui/player_preview_border"
   }
 }
 

@@ -1,8 +1,6 @@
 {
   "namespace": "world_section",
 
-//  Smaller Border for World Save Screenshot
-
   "selector_pane_content": {
     "type": "stack_panel",
     "controls": [
@@ -24,7 +22,7 @@
                   {
                     "border": {
                       "type": "image",
-                      "size": [ "100% + 2px", "100% + 2px" ],//  <---------- The border size is changed here
+                      "size": [ "100% + 2px", "100% + 2px" ],
                       "texture": "textures/ui/BannersTransparent",
                       "anchor_from": "center",
                       "anchor_to": "center"
@@ -153,95 +151,6 @@
     ]
   },
 
-  // SERVER button & section
-  "server_settings_button@settings_common.section_toggle_base": {
-    "$toggle_view_binding_name": "server_settings_button_toggle",
-    "$glyph_texture": "",
-    "$glyph_color_texture": "",
-    "$glyph_size": [ 21, 14 ],
-    "$button_text": "#title_text",
-    "$button_text_binding_type": "global",
-    "$button_text_binding_condition": "visible",
-
-    "$custom_toggle_binding_type": "global",
-    "$custom_toggle_state_binding_name": "#title_text",
-    "$custom_toggle_state_binding_name_override": "#panel_title",
-
-    "$glyph_color_bindings": [
-      {
-        "binding_name": "#server_icon",
-        "binding_name_override": "#texture"
-      },
-      {
-        "binding_name": "#server_icon_file_system",
-        "binding_name_override": "#texture_file_system"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
-        "target_property_name": "#visible"
-      }
-    ],
-
-    "$glyph_bindings": [
-      {
-        "binding_name": "#server_outline_icon",
-        "binding_name_override": "#texture"
-      },
-      {
-        "binding_name": "#server_icon_file_system",
-        "binding_name_override": "#texture_file_system"
-      },
-      {
-        "binding_type": "view",
-        "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
-        "target_property_name": "#visible"
-      }
-    ],
-
-    "$glyph_progress_bindings": [
-      {
-        "binding_name": "(#server_icon = 'loading')",
-        "binding_name_override": "#visible"
-      }
-    ]
-  },
-
-  "server_section@server_form.custom_form_scrolling_content": {
-    "ignored": "($is_pregame)",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "server_settings_button_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  // GAME button & section
-
-  "game_button@settings_common.section_toggle_base": {
-    "$toggle_view_binding_name": "game_button_toggle",
-    "$glyph_texture": "textures/ui/controller_glyph",
-    "$glyph_color_texture": "textures/ui/controller_glyph_color",
-    "$glyph_size": [ 21, 14 ],
-    "$button_text": "options.category.game",
-    "$toggle_property_bag": {
-      "#panel_title": "createWorldScreen.game.settings"
-    }
-  },
-
-  "classroom_toggle@settings_common.option_toggle": {
-    "ignored": "(not $education_edition)",
-    "bindings": [
-      {
-        "binding_name": "#classroom_settings_visible",
-        "binding_name_override": "#visible"
-      }
-    ]
-  },
-
   "game_section": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
@@ -314,7 +223,7 @@
           "$dropdown_name": "player_game_mode_dropdown",
           "$options_dropdown_toggle_label_binding": "#player_game_mode_dropdown_toggle_label",
           "$option_enabled_binding_name": "#player_game_mode_dropdown_enabled",
-          "$dropdown_scroll_content_size": [ "100%", "200%" ],
+          "$dropdown_scroll_content_size": [ "100%", "260%" ],
           "$focus_override_right": "FOCUS_OVERRIDE_STOP",
           "bindings": [
             {
@@ -407,12 +316,21 @@
       },
       {
         "level_seed_selector@settings_common.option_text_edit_with_button": {
-          "ignored": "$education_edition",
+          "ignored": "($education_edition or $is_android_trial)",
           "$option_label": "createWorldScreen.levelSeed",
           "$option_binding_name": "#world_seed",
           "$option_enabled_binding_name": "#world_seed_enabled",
           "$text_box_name": "world_seed_text_box",
           "$pressed_button_name": "choose_ugc_level_seed"
+        }
+      },
+      {
+        "level_seed_selector_trial@world_section.option_text_edit_mock_with_button": {
+          "ignored": "($education_edition or not $is_android_trial)",
+          "$option_label": "createWorldScreen.levelSeed",
+          "$option_binding_name": "#world_seed",
+          "$option_enabled_binding_name": "#world_seed_enabled",
+          "$pressed_button_name": "button.redirect_to_upsell"
         }
       },
       {
@@ -543,6 +461,17 @@
         }
       },
       {
+        "code_builder_toggle@settings_common.option_toggle": {
+          "ignored": "(not $education_edition)",
+          "$option_label": "options.codeBuilder",
+          "$option_binding_name": "#code_builder",
+          "$option_enabled_binding_name": "#code_builder_enabled",
+          "$toggle_name": "code_builder",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
         "education_toggle@settings_common.option_toggle": {
           // Ignore education toggle in education since education is always on in education
           "ignored": "$education_edition",
@@ -640,6 +569,17 @@
               "$focus_override_down": "delete_world_button"
             }
           ],
+          "$toggle_binding_condition": "always_when_visible"
+        }
+      },
+      {
+        "command_blocks_enabled_toggle@settings_common.option_toggle": {
+          "ignored": "$education_edition",
+          "$option_label": "createWorldScreen.commandblocksenabled",
+          "$option_binding_name": "#command_blocks_enabled",
+          "$option_enabled_binding_name": "#command_blocks_enabled_on",
+          "$toggle_name": "command_blocks_enabled",
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
           "$toggle_binding_condition": "always_when_visible"
         }
       },
@@ -821,90 +761,6 @@
     ]
   },
 
-  //TEXTURE PACKS
-
-  "level_texture_pack_button@resource_packs.resource_packs_section_toggle_base": {
-    "$toggle_view_binding_name": "level_texture_pack_button_toggle",
-    "enabled": "(not $trial)",
-    "$cycling_icon_path": "#cycling_icon_path_level",
-    "$cycling_icon_zip": "#cycling_icon_zip_level",
-    "$cycling_icon_file_system": "#cycling_icon_file_system_level",
-    "$button_text": "menu.resourcepacks",
-    "$toggle_property_bag": {
-      "#panel_title": "menu.resourcepacks"
-    }
-  },
-
-  //resource_packs.selected_stack_panel
-  "level_texture_pack_section@resource_packs.selected_stack_panel": {
-    "$selected_pack_items": "#selected_pack_items_level",
-    "$available_pack_items": "#available_pack_items_level",
-    "$unowned_pack_items": "#unowned_pack_items_level",
-    "$default_item_texture": "#default_item_texture_level",
-    "$default_item_file_system": "#default_item_file_system_level",
-    "$default_item_zip": "#default_item_zip_level",
-    "$default_item_title": "menu.globalpacks",
-    "$default_item_description": "resourcePack.description.default.level",
-    "$selected_grid_dimensions": "#selected_grid_dimensions_level",
-    "$available_grid_dimensions": "#available_grid_dimensions_level",
-    "$unowned_grid_dimensions": "#unowned_grid_dimensions_level",
-    "$button.selected_pack": "button.selected_pack_level",
-    "$button.deselected_pack": "button.deselected_pack_level",
-    "$button.available_pack": "button.available_pack_level",
-    "$button.unowned_pack": "button.unowned_pack_level",
-    "$button.move_left": "button.move_left_level",
-    "$button.sort_up": "button.sort_up_level",
-    "$button.sort_down": "button.sort_down_level",
-    "$button.report_errors": "button.report_errors_level",
-    "$bottom_description_text": "resourcePack.description.bottom.level",
-    "$selected_label_text": "resourcePack.selected.title.packs",
-    "$available_label_text": "resourcePack.available.title.packs",
-    "$unowned_label_text": "resourcePack.suggestedContent.title",
-    "$view_more_unowned_content_button_text": "resourcePack.suggestedContent.button.viewMore",
-    "$total_size_binding": "#total_size_binding_level",
-    "$in_game_error_text": "resourcePack.error.ingame.packs",
-    "$invalid_pack_items": "#invalid_pack_items_level",
-    "$invalid_grid_dimensions": "#invalid_grid_dimensions_level",
-    "$button.invalid_pack": "button.invalid_pack_level",
-    "$button.pack_warning": "button.pack_warning_level",
-    "$invalid_label_text": "resourcePack.invalid.title.packs",
-    "$top_label_box": true,
-    "$show_checkbox": true,
-    "$button.resource_pack_options_exit": "button.resource_pack_options_exit_level",
-    "$button.pack_settings": "button.pack_settings_level",
-    "$options_slider_name": "content_tier_slider_level",
-    "$display_suggested_content_offers": true,
-    "$suggested_content_offers_collection": "#suggested_offers_collection_level",
-    "$suggested_content_offers_loading_binding": "#suggested_offers_loading_level",
-    "$button.more_suggested_content_offers": "button.more_suggested_content_offers_level",
-    "$button.select_offer": "button.select_offer_level",
-    "$suggested_content_offers_label_text": "#suggested_offers_title_level",
-    "$no_available_packs_visibility_binding": "#no_available_packs_visibility_level",
-    "$view_more_unowned_content_button_visibility_binding": "#suggested_content_visible_level",
-    "$force_pack_download_binding_type": "global",
-    "bindings": [
-      {
-        "binding_type": "view",
-        "source_control_name": "level_texture_pack_button_toggle",
-        "source_property_name": "#toggle_state",
-        "target_property_name": "#visible"
-      }
-    ]
-  },
-
-  //ADDONS
-  "addon_button@resource_packs.resource_packs_section_toggle_base": {
-    "$toggle_view_binding_name": "addon_button_toggle",
-    "enabled": "(not $trial)",
-    "$cycling_icon_path": "#cycling_icon_path_addon",
-    "$cycling_icon_zip": "#cycling_icon_zip_addon",
-    "$cycling_icon_file_system": "#cycling_icon_file_system_addon",
-    "$button_text": "menu.behaviors",
-    "$toggle_property_bag": {
-      "#panel_title": "menu.behaviors"
-    }
-  },
-
   "addon_section@resource_packs.selected_stack_panel": {
     "type": "stack_panel",
     "size": [ "100%", "100%c" ],
@@ -962,212 +818,6 @@
         "target_property_name": "#visible"
       }
     ]
-  },
-
-  "world_game_mode_dropdown_content@settings_common.option_radio_dropdown_group": {
-    "$radio_buttons": [
-      {
-        "world_survival_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_game_mode_radio_survival",
-          "$radio_label_text": "createWorldScreen.gameMode.survival"
-        }
-      },
-      {
-        "world_creative_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_game_mode_radio_creative",
-          "$radio_label_text": "createWorldScreen.gameMode.creative"
-        }
-      },
-      {
-        "world_adventure_mode_toggle@settings_common.radio_with_label": {
-          "ignored": "(not $is_world_edit and not $is_realms_edit and not $is_template_create)",
-          "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
-          "$radio_label_text": "createWorldScreen.gameMode.adventure"
-        }
-      } /*,//Uncomment when Spectator, and Hardcore game modes are implemented
-      {
-        "world_spectator_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_game_mode_radio_spectator",
-          "$radio_label_text": "createWorldScreen.gameMode.spectator"
-        }
-      },
-      {
-        "world_hardcore_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_game_mode_radio_hardcore",
-          "$radio_label_text": "createWorldScreen.gameMode.hardcore"
-        }
-      }*/
-    ]
-  },
-
-  "xbl_broadcast_dropdown_content@settings_common.option_radio_dropdown_group": {
-    "size": [ "100%", "100%c" ],
-    "$radio_buttons": [
-      {
-        "invite_only_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#xbl_broadcast_invite_only",
-          "$radio_label_text": "options.xboxliveBroadcast.inviteOnly"
-        }
-      },
-      {
-        "friends_only_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#xbl_broadcast_friends_only",
-          "$radio_label_text": "options.xboxliveBroadcast.friendsOnly"
-        }
-      },
-      {
-        "friends_of_friends_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#xbl_broadcast_friends_of_friends",
-          "$radio_label_text": "options.xboxliveBroadcast.friendsOfFriends"
-        }
-      }
-    ]
-  },
-
-  "platform_broadcast_dropdown_content@settings_common.option_radio_dropdown_group": {
-    "size": [ "100%", "100%c" ],
-    "$radio_buttons": [
-      //{
-      //  "invite_only_toggle@settings_common.radio_with_label": {
-      //    "$toggle_state_binding_name": "#platform_broadcast_invite_only",
-      //    "$radio_label_text": "options.xboxliveBroadcast.inviteOnly"
-      //  }
-      //},
-      {
-        "friends_only_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#platform_broadcast_friends_only",
-          "$radio_label_text": "options.xboxliveBroadcast.friendsOnly"
-        }
-      },
-      {
-        "friends_of_friends_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#platform_broadcast_friends_of_friends",
-          "$radio_label_text": "options.xboxliveBroadcast.friendsOfFriends",
-          "bindings": [
-             {
-               "binding_name": "#platform_toggle_visible_friends_of_friends",
-               "binding_name_override": "#visible"
-             }
-           ]
-        }
-      }
-    ]
-  },
-
-  "player_game_mode_dropdown_content@settings_common.option_radio_dropdown_group": {
-    "$radio_buttons": [
-      {
-        "player_survival_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#player_game_mode_radio_survival",
-          "$radio_label_text": "createWorldScreen.gameMode.survival"
-        }
-      },
-      {
-        "player_creative_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#player_game_mode_radio_creative",
-          "$radio_label_text": "createWorldScreen.gameMode.creative"
-        }
-      },
-      {
-        "player_adventure_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#player_game_mode_radio_adventure",
-          "$radio_label_text": "createWorldScreen.gameMode.adventure"
-        }
-      } /*,//Uncomment when Spectator, and Hardcore game modes are implemented
-      {
-        "player_spectator_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#player_game_mode_radio_spectator",
-          "$radio_label_text": "createWorldScreen.gameMode.spectator"
-        }
-      },
-      {
-        "player_hardcore_mode_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#player_game_mode_radio_hardcore",
-          "$radio_label_text": "createWorldScreen.gameMode.hardcore"
-        }
-      }*/
-    ]
-  },
-
-  "world_type_dropdown_content@settings_common.option_radio_dropdown_group": {
-    "$radio_buttons": [
-      {
-        "flat_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_flat",
-          "$radio_label_text": "generator.flat"
-        }
-      },
-      {
-        "infinite_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_infinite",
-          "$radio_label_text": "generator.infinite"
-        }
-      }, /*Uncomment when Large Biome and Amplified world types are implemented
-      {
-        "large_biomes_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_large_biomes",
-          "$radio_label_text": "generator.largeBiomes"
-        }
-      },
-      {
-        "amplified_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_amplified",
-          "$radio_label_text": "generator.amplified"
-        }
-      },*/
-      {
-        "old_world_type_toggle@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_type_radio_old",
-          "$radio_label_text": "generator.old"
-        }
-      }
-    ]
-  },
-
-  "world_difficulty_dropdown_content@settings_common.option_radio_dropdown_group": {
-    "$radio_buttons": [
-      {
-        "@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_difficulty_radio_peaceful",
-          "$radio_label_text": "options.difficulty.peaceful"
-        }
-      },
-      {
-        "@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_difficulty_radio_easy",
-          "$radio_label_text": "options.difficulty.easy"
-        }
-      },
-      {
-        "@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_difficulty_radio_normal",
-          "$radio_label_text": "options.difficulty.normal"
-        }
-      },
-      {
-        "@settings_common.radio_with_label": {
-          "$toggle_state_binding_name": "#world_difficulty_radio_hard",
-          "$radio_label_text": "options.difficulty.hard"
-        }
-      }
-    ]
-  },
-
-  // MULTIPLAYER button and section
-
-  "multiplayer_button@settings_common.section_toggle_base": {
-    "$toggle_view_binding_name": "multiplayer_button_toggle",
-    "$glyph_texture": "textures/ui/multiplayer_glyph",
-    "$glyph_color_texture": "textures/ui/multiplayer_glyph_color",
-    "$glyph_size": [ 22, 12 ],
-    "$button_text": "options.group.multiplayer",
-    "$toggle_property_bag": {
-      "#panel_title": "createWorldScreen.multiplayer.settings"
-    }
-  },
-
-  "cross_platform_warning_label@pause.disconnected_label": { 
-    "text": ""
   },
 
   "multiplayer_section": {
@@ -1263,6 +913,59 @@
               "binding_name_override": "#visible"
             }
           ]
+        }
+      },
+      {
+        "platform_multiplayer_warning_label@world_section.cross_platform_warning_label": {
+          "ignored": "(not $nx_os)",
+          "text": "#platform_multiplayer_warning_text",
+          "bindings": [
+            {
+              "binding_name": "#platform_multiplayer_warning_text"
+            },
+            {
+              "binding_name": "#platform_multiplayer_warning_label_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "xbl_multiplayer_warning_label@world_section.cross_platform_warning_label": {
+          "ignored": "(not $is_xboxlive_enabled)",
+          "text": "#xbl_multiplayer_warning_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_multiplayer_warning_text"
+            },
+            {
+              "binding_name": "#xbl_multiplayer_warning_label_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "option_text_edit_mock_control_with_button": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%", "30px" ],
+    "controls": [
+      {
+        "trial_text_box_button@common_buttons.transparent_content_button": {
+          "size": [ "85%", "100%" ],
+          "$default_button_texture": "textures/ui/edit_box_indent",
+          "$hover_button_texture": "textures/ui/edit_box_indent_hover",
+          "$pressed_button_texture": "textures/ui/edit_box_indent",
+          "$locked_button_texture": "textures/ui/edit_box_indent"
+        }
+      },
+      {
+        "seed_arrow_button@common_buttons.light_glyph_button": {
+          "$button_content": "settings_common.arrow_image",
+          "size": [ "fill", "100%" ]
         }
       }
     ]
