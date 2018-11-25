@@ -1,0 +1,29 @@
+{
+  "namespace": "start",
+
+  "store_button_sale_banner@start.sale_ribbon_icon": {
+    "size": [ "100%c", 16 ], // For some reason doing 100%c + X doesn't work on an image?
+    "controls": [
+      {
+        "banner_label_padding": {
+          "type": "panel",
+          "size": [ "100%c + 12px", "100%" ],
+          "controls": [
+            {
+              "banner_label": {
+                "type": "label",
+                "size": [ "default", 10 ],
+                "offset": [ -1, -1 ],
+                "text": "store.startMenu.sale",
+                "color": "$new_offer_icon_text_color",
+                "layer": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

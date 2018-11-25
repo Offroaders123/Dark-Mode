@@ -4,14 +4,14 @@
         "description": "A dark user interface for Minecraft Bedrock Edition! Also compatible with Faithful 32x! Created by Offroaders123",
         "name": "§9Dark Mode",
         "uuid": "1ad37131-6fd3-4191-b430-5b1672d7a345",
-        "version": [1, 7, 0]
+        "version": [1, 7, 1]
     },
     "modules": [
         {
             "description": "A dark user interface for Minecraft Bedrock Edition! Also compatible with Faithful 32x! Created by Offroaders123",
             "type": "resources",
             "uuid": "6f1aa51c-5fe8-43dd-8895-21e6e718f3ba",
-            "version": [1, 7, 0]
+            "version": [1, 7, 1]
         }
     ],
     "subpacks": [
