@@ -4,14 +4,14 @@
         "description": "A dark user interface for Minecraft Bedrock Edition! Also compatible with Faithful 32x! Created by Offroaders123",
         "name": "§9Dark Mode",
         "uuid": "1ad37131-6fd3-4191-b430-5b1672d7a345",
-        "version": [1, 7, 1]
+        "version": [1, 8, 0]
     },
     "modules": [
         {
             "description": "A dark user interface for Minecraft Bedrock Edition! Also compatible with Faithful 32x! Created by Offroaders123",
             "type": "resources",
             "uuid": "6f1aa51c-5fe8-43dd-8895-21e6e718f3ba",
-            "version": [1, 7, 1]
+            "version": [1, 8, 0]
         }
     ],
     "subpacks": [
@@ -31,5 +31,5 @@
 // Created by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.
 
 // Textures have been created by Offroaders123, Vattic, and xMrVizzy.
-// Textures are from the vanilla Bedrock edition resource pack / Offroaders123's Bedrock edition Faithful 32x resource pack with a darker shade applied.
-// Some textures originated from Vattic and xMrVizzy's Java edition Faithful 32x resource pack, so credit is due to them!
+// Textures are from the Bedrock Edition vanilla resource pack / Offroaders123's Faithful 32x resource pack with a darker shade applied.
+// Some textures originated from Vattic and xMrVizzy's Faithful 32x resource pack, so credit is due to them!
