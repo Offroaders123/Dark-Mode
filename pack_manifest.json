@@ -16,14 +16,9 @@
     ],
     "subpacks": [
     {
-        "folder_name": "faithful_32x",
-        "name": "Faithful 32x",
-        "memory_tier": 1
-        },
-    {
         "folder_name": "vanilla",
         "name": "Vanilla",
-        "memory_tier": 2
+        "memory_tier": 1
         }
     ]
 }
