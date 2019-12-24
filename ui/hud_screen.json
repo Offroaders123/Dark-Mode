@@ -1,0 +1,19 @@
+{
+  "namespace": "hud",
+
+  "full_progress_bar": {
+    "texture": "textures/ui/xp_full",
+	"uv_size": [ 182, 5 ]
+  },
+
+  "empty_progress_bar": {
+    "texture": "textures/ui/xp_empty",
+	"uv_size": [ 182, 5 ]
+  },
+
+  "progress_bar_nub": {
+    "texture": "textures/ui/xp_nub"
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

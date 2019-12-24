@@ -2,7 +2,7 @@
   "namespace": "mob_effect",
 
   "main_background": {
-    "texture": "textures/ui/mob_effect_background_right"
+    "texture": "textures/ui/mob_effect_background_left"
   },
 
   "button_background": {
@@ -10,7 +10,7 @@
   },
 
   "main_background_left_handed": {
-    "texture": "textures/ui/mob_effect_background_left"
+    "texture": "textures/ui/mob_effect_background_right"
   },
 
   "button_background_left_handed": {
