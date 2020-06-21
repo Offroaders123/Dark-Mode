@@ -15,7 +15,6 @@
       }
     ]
   },
-
   "nether_loading_background@world_loading_screen_background": {
     "texture": "textures/ui/background_nether",
     "color": [0.5, 0.5, 0.5],
@@ -31,7 +30,6 @@
       }
     ]
   },
-
   "theend_loading_background@world_loading_screen_background": {
     "texture": "textures/ui/background_end",
     "controls": [

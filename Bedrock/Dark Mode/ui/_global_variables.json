@@ -1,6 +1,6 @@
 {
   //////// Text colors ////////
-  "$generic_button_text_color": [ 1.0, 1.0, 1.0 ], // for those times you find a button that's kind of used but shouldn't...
+  "$generic_button_text_color": [ 1.0, 1.0, 1.0 ],
 
   "$light_button_default_text_color": [ 0.667, 0.667, 0.667 ], // Edited
   "$light_button_hover_text_color": [ 1.0, 1.0, 1.0 ],
@@ -68,7 +68,7 @@
   "$item_stack_count_color": [ 1.0, 1.0, 1.0 ],
   "$selected_item_stack_count_color": [ 1.0, 1.0, 0.0 ],
 
-  "$item_hover_text_color": [ 1.0, 1.0, 1.0 ], // Color of hover text gets overwrritten by text color format codes, so this is just for not failing unit tests
+  "$item_hover_text_color": [ 1.0, 1.0, 1.0 ],
 
   "$pocket_item_details_color": [ 1.0, 1.0, 1.0 ],
 

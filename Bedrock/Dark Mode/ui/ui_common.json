@@ -8,7 +8,6 @@
     "layer": 1,
     "tiled": true
   },
-
   "portal_background": {
     "ignored": "$is_holographic",
     "type": "image",

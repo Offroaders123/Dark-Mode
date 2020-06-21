@@ -2,7 +2,7 @@
   "namespace": "start",
 
   "store_button_sale_banner@start.sale_ribbon_icon": {
-    "size": [ "100%c", 16 ], // For some reason doing 100%c + X doesn't work on an image?
+    "size": [ "100%c", 16 ],
     "controls": [
       {
         "banner_label_padding": {
@@ -18,7 +18,7 @@
                 "color": "$store_sales_banner_text_color",
                 "layer": 1,
                 "tts_name": "accessibility.store.tag",
-                "tts_control_type_order_priority": 1004, // To be read after the button control type
+                "tts_control_type_order_priority": 1004,
                 "tts_value_order_priority": 1003
               }
             }
