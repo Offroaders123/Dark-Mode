@@ -1,4 +1,14 @@
-# Dark Mode
+<table>
+  <tr>
+    <td>
+      <img width="64" src="icon.png">
+    </td>
+    <td>
+      <h1>Dark Mode</h1>
+    </td>
+  </tr>
+</table>
+
 Dark Mode is a resource pack that adds a new dark appearance to the vanilla user interface!
 
 * Support for Bedrock Edition
