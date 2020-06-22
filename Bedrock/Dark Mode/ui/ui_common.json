@@ -1,0 +1,20 @@
+{
+  "namespace": "common",
+
+  "dirt_background": {
+    "ignored": "($is_holographic and not $is_living_room_mode)",
+    "type": "image",
+    "texture": "textures/ui/background_overworld",
+    "layer": 1,
+    "tiled": true
+  },
+  "portal_background": {
+    "ignored": "$is_holographic",
+    "type": "image",
+    "texture": "textures/ui/background_realms",
+    "layer": 1,
+    "tiled": true
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

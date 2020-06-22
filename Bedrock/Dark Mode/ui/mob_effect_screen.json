@@ -1,0 +1,18 @@
+{
+  "namespace": "mob_effect",
+
+  "main_background": {
+    "texture": "textures/ui/mob_effect_background_left"
+  },
+  "button_background": {
+    "texture": "textures/ui/mob_effect_tab_left"
+  },
+  "main_background_left_handed": {
+    "texture": "textures/ui/mob_effect_background_right"
+  },
+  "button_background_left_handed": {
+    "texture": "textures/ui/mob_effect_tab_right"
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

@@ -1,0 +1,49 @@
+{
+  "namespace": "progress",
+
+  "overworld_loading_background@world_loading_screen_background": {
+    "texture": "textures/ui/background_overworld",
+    "controls": [
+      {
+        "background_gradient": {
+          "type": "custom",
+          "renderer": "gradient_renderer",
+          "color1": [ 0, 0, 0, 0.5 ],
+          "color2": [ 0, 0, 0, 0.7 ],
+          "ignored": "$is_holographic"
+        }
+      }
+    ]
+  },
+  "nether_loading_background@world_loading_screen_background": {
+    "texture": "textures/ui/background_nether",
+    "color": [0.5, 0.5, 0.5],
+    "controls": [
+      {
+        "background_gradient": {
+          "type": "custom",
+          "renderer": "gradient_renderer",
+          "color1": [ 0.3, 0.3, 0.3, 0.2 ],
+          "color2": [ 0.5, 0.188, 0.188, 0.4 ],
+          "ignored": "$is_holographic"
+        }
+      }
+    ]
+  },
+  "theend_loading_background@world_loading_screen_background": {
+    "texture": "textures/ui/background_end",
+    "controls": [
+      {
+        "background_gradient": {
+          "type": "custom",
+          "renderer": "gradient_renderer",
+          "color1": [ 0, 0, 0, 0.2 ],
+          "color2": [ 0, 0, 0, 0.4 ],
+          "ignored": "$is_holographic"
+        }
+      }
+    ]
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

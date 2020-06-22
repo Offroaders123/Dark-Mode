@@ -1,0 +1,9 @@
+{
+  "namespace": "horse",
+
+  "renderer_bg": {
+    "texture": "textures/ui/player_preview_border"
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

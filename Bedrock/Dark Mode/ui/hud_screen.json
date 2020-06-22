@@ -1,0 +1,104 @@
+{
+  "namespace": "hud",
+
+  "empty_progress_bar": {
+    "texture": "textures/ui/xp_empty",
+    "uv_size": [ 182, 5 ]
+  },
+  "full_progress_bar": {
+    "texture": "textures/ui/xp_full",
+    "uv_size": [ 182, 5 ]
+  },
+  "progress_bar_nub": {
+    "texture": "textures/ui/xp_nub"
+  },
+  "exp_progress_bar_and_hotbar": {
+    "type": "panel",
+    "size": [ "100%c", 31 ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": "$xp_control_offset",
+    "controls": [
+      {
+        "resizing_xp_bar_with_hotbar": {
+          "type": "panel",
+          "size": [ "100%c", 5 ],
+          "controls": [
+            {
+              "empty_progress_bar@empty_progress_bar": {
+                "size": [ "100%c", 5 ],
+                "layer": 1,
+                "controls": [
+                  {
+                    "full_progress_bar@full_progress_bar": {
+                      "size": [ "100%c + 10px", 5 ],
+                      "layer": 2,
+                      "controls": [
+                        {
+                          "progress_bar_nub@progress_bar_nub": {
+                            "size": [ "100%c - 10px", 5 ],
+                            "max_size": [ 172, 5 ],
+                            "layer": 3,
+                            "controls": [
+                              {
+                                "hotbar@hotbar_chooser": {
+                                  "offset": [ 4, 16 ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "progress_text_label@progress_text_label": {
+                "offset": [ 0, 0 ],
+                "layer": 7
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_not_creative_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "hotbar@hotbar_chooser": {
+          "offset": [ 4, 16 ],
+          "bindings": [
+            {
+              "binding_name": "#is_creative_mode",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "item_text_factory": {
+          "size": [ 100, 10 ],
+          "type": "factory",
+          "control_ids": {
+            "survival_item_text": "@hud.survival_item_name_text",
+            "survival_item_text_above_interact_button": "@hud.survival_above_interact_button_item_text",
+            "survival_jukebox_text": "@hud.survival_jukebox_popup_text",
+            "survival_jukebox_text_above_interact_button": "@hud.survival_jukebox_above_interact_button_popup_text",
+            "creative_item_text": "@hud.creative_item_name_text",
+            "create_item_text_above_interact_button": "@hud.creative_above_interact_button_item_text",
+            "creative_jukebox_text": "@hud.creative_jukebox_popup_text",
+            "creative_jukebox_text_above_interact_button": "@hud.creative_jukebox_above_interact_button_popup_text"
+
+          }
+        }
+      }
+    ]
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

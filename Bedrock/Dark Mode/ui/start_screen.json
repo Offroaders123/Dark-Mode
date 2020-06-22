@@ -1,0 +1,32 @@
+{
+  "namespace": "start",
+
+  "store_button_sale_banner@start.sale_ribbon_icon": {
+    "size": [ "100%c", 16 ],
+    "controls": [
+      {
+        "banner_label_padding": {
+          "type": "panel",
+          "size": [ "100%c + 12px", "100%" ],
+          "controls": [
+            {
+              "banner_label": {
+                "type": "label",
+                "size": [ "default", 10 ],
+                "offset": [ -1, -1 ],
+                "text": "store.startMenu.sale",
+                "color": "$store_sales_banner_text_color",
+                "layer": 1,
+                "tts_name": "accessibility.store.tag",
+                "tts_control_type_order_priority": 1004,
+                "tts_value_order_priority": 1003
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.
