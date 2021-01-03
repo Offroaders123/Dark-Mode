@@ -1,0 +1,222 @@
+{
+  "namespace": "furnace",
+
+  "furnace_screen@common.inventory_screen_common": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "furnace.furnace_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "furnace_pocket.furnace_panel",
+        "$close_on_player_hurt": true
+      }
+    ],
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$close_on_player_hurt|default": false
+  },
+  "furnace_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "common_panel@common.common_panel": {
+                "$use_modern_close_button": true
+              }
+            },
+            {
+              "header_title@common.section_heading_label": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, "5px" ],
+                "text": "$container_title",
+                "layer": 5
+              }
+            },
+            {
+              "furnace_inventory": {
+                "type": "panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ "5px", "9px" ],
+                "size": [ "100%", "50% - 12px" ],
+                "controls": [
+                  {
+                    "furnace_input_container": {
+                      "type": "panel",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [ "50%", "100%" ],
+                      "controls": [
+                        {
+                          "furnace_input": {
+                            "type": "panel",
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle",
+                            "size": [ "16px", "16px" ],
+                            "controls": [
+                              {
+                                "furnace_ingredient_input": {
+                                  "type": "panel",
+                                  "anchor_from": "right_middle",
+                                  "anchor_to": "right_middle",
+                                  "offset": [ "-20px", "-19px" ],
+                                  "size": [ "18px", "18px" ],
+                                  "controls": [
+                                    {
+                                      "ingredient_item@common.container_item": {
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "$item_collection_name": "furnace_ingredient_items",
+                                        "$focus_id": "furnace_ingredient_item",
+                                        "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_left_binding_type": "none",
+                                        "$focus_override_up": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_up_binding_type": "none"
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "furnace_flame_container": {
+                                  "type": "panel",
+                                  "offset": [ "-21px", "-1px" ],
+                                  "size": [ "13px", "13px" ],
+                                  "controls": [
+                                    {
+                                      "furnace_flame_empty": {
+                                        "type": "image",
+                                        "texture": "textures/ui/flame_empty_image",
+                                        "layer": 2
+                                      }
+                                    },
+                                    {
+                                      "furnace_flame_full": {
+                                        "type": "image",
+                                        "texture": "textures/ui/flame_full_image",
+                                        "clip_direction": "down",
+                                        "layer": 3,
+                                        "bindings": [
+                                          {
+                                            "binding_name": "#furnace_flame_ratio",
+                                            "binding_name_override": "#clip_ratio",
+                                            "binding_condition": "always"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "furnace_fuel_input": {
+                                  "type": "panel",
+                                  "anchor_from": "right_middle",
+                                  "anchor_to": "right_middle",
+                                  "offset": [ "-20px", "17px" ],
+                                  "size": [ "18px", "18px" ],
+                                  "controls": [
+                                    {
+                                      "fuel_item@common.container_item": {
+                                        "anchor_from": "left_middle",
+                                        "anchor_to": "left_middle",
+                                        "$item_collection_name": "furnace_fuel_items",
+                                        "$focus_id": "furnace_fuel_item",
+                                        "$focus_override_right": "furnace_output_item",
+                                        "$focus_override_right_binding_type": "none",
+                                        "$focus_override_left": "FOCUS_OVERRIDE_STOP",
+                                        "$focus_override_left_binding_type": "none"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "furnace_progress_arrow_container": {
+                      "type": "panel",
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [ "-2px", "-2px" ],
+                      "size": [ "22px", "15px" ],
+                      "controls": [
+                        {
+                          "furnace_progress_arrow_empty": {
+                            "type": "image",
+                            "texture": "textures/ui/arrow_inactive",
+                            "layer": 1
+                          }
+                        },
+                        {
+                          "furnace_progress_arrow_full": {
+                            "type": "image",
+                            "texture": "textures/ui/arrow_active",
+                            "clip_direction": "left",
+                            "layer": 3,
+                            "bindings": [
+                              {
+                                "binding_name": "#furnace_arrow_ratio",
+                                "binding_name_override": "#clip_ratio",
+                                "binding_condition": "always"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "furnace_output": {
+                      "type": "panel",
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "size": [ "50%", "100%" ],
+                      "controls": [
+                        {
+                          "output_item@common.container_item": {
+                            "anchor_from": "left_middle",
+                            "anchor_to": "left_middle",
+                            "offset": [ "18px", "-1px" ],
+                            "size": [ "26px", "26px" ],
+                            "$cell_image_size": [ "26px", "26px" ],
+                            "$item_collection_name": "furnace_output_items",
+                            "$focus_id": "furnace_output_item",
+                            "$focus_override_right_binding_type": "none",
+                            "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                            "$focus_override_left_binding_type": "none",
+                            "$focus_override_left": "furnace_fuel_item"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid@common.hotbar_grid_template": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+          ]
+        }
+      },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "flying_item_renderer@common.flying_item_renderer": {} }
+    ]
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

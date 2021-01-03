@@ -1,0 +1,100 @@
+{
+  "namespace": "chest",
+
+  "chest_screen@common.inventory_screen_common": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "$desktop_screen_content",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "$pocket_screen_content",
+        "$close_on_player_hurt": true
+      }
+    ],
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$close_on_player_hurt|default": false
+  },
+  "small_chest_screen@chest.chest_screen": {
+    "$desktop_screen_content": "chest.small_chest_panel",
+    "$pocket_screen_content|default": "pocket_containers.small_chest_panel"
+  },
+  "large_chest_screen@chest.chest_screen": {
+    "$desktop_screen_content": "chest.large_chest_panel",
+    "$pocket_screen_content": "pocket_containers.large_chest_panel"
+  },
+  "ender_chest_screen@chest.small_chest_screen": {
+    "$pocket_screen_content": "pocket_containers.ender_chest_panel"
+  },
+  "shulker_box_screen@chest.small_chest_screen": {
+    "$pocket_screen_content": "pocket_containers.shulker_box_panel"
+  },
+  "barrel_screen@chest.small_chest_screen": {
+    "$pocket_screen_content": "pocket_containers.barrel_panel"
+  },
+  "small_chest_panel@chest.chest_panel": {
+    "$root_panel_size|default": [ "176px", "167px" ],
+    "$chest_inventory_grid_dimensions": [ 9, 3 ]
+  },
+  "large_chest_panel@chest.chest_panel": {
+    "$root_panel_size": [ "176px", "221px" ],
+    "$chest_inventory_grid_dimensions": [ 9, 6 ]
+  },
+  "chest_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            {
+              "common_panel@common.common_panel": {
+                "$use_modern_close_button": true,
+                "$close_button_offset": [ "-4px", "2px" ]
+              }
+            },
+            {
+              "header_title@common.section_heading_label": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ "8px", "5px" ],
+                "text": "$container_title",
+                "layer": 5
+              }
+            },
+            {
+              "chest_inventory_grid": {
+                "type": "grid",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ "7px", "17px" ],
+                "grid_dimensions": "$chest_inventory_grid_dimensions",
+                "grid_item_template": "chest.chest_inventory_grid_item_template",
+                "collection_name": "container_items"
+              }
+            },
+            {
+              "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {
+                "$inventory_label_offset": [ "8px", "-1px" ]
+              }
+            },
+            { "hotbar_grid@common.hotbar_grid_template": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+          ]
+        }
+      },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      { "flying_item_renderer@common.flying_item_renderer": {} }
+    ]
+  },
+  "chest_inventory_grid_item_template@common.container_item": {
+    "$item_collection_name": "container_items"
+  }
+}
+
+// Edited by Offroaders123 for the Dark Mode resource pack for Minecraft Bedrock Edition.

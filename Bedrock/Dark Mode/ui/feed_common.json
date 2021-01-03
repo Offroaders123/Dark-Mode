@@ -1,13 +1,13 @@
 {
   "namespace": "feed_common",
 
-  "popup_dialog_bg": {
-    "type": "image",
-    "texture": "textures/ui/Black"
-  },
   "white_banner": {
     "type": "image",
     "texture": "textures/ui/Gray"
+  },
+  "popup_dialog_bg": {
+    "type": "image",
+    "texture": "textures/ui/Black"
   },
   "share_text_box@common.transparent_text_edit_box": {
     "$box_texture": "textures/ui/Gray"
