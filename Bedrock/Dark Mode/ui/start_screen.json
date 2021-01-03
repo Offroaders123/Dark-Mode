@@ -2,7 +2,7 @@
   "namespace": "start",
 
   "store_button_sale_banner@start.sale_ribbon_icon": {
-    "size": [ "100%c", 16 ],
+    "size": [ "100%c", "16px" ],
     "controls": [
       {
         "banner_label_padding": {
@@ -12,8 +12,8 @@
             {
               "banner_label": {
                 "type": "label",
+                "offset": [ "-1px", "-1px" ],
                 "size": [ "default", 10 ],
-                "offset": [ -1, -1 ],
                 "text": "store.startMenu.sale",
                 "color": "$store_sales_banner_text_color",
                 "layer": 1,

@@ -2,10 +2,10 @@
   "format_version": 2,
 
   "header": {
-    "description": "A darker alternative to the vanilla user interface! Created by Offroaders123 for Minecraft Bedrock Edition",
     "name": "§9Dark Mode",
+    "description": "A darker alternative to the vanilla user interface! Created by Offroaders123 for Minecraft Bedrock Edition",
     "uuid": "1ad37131-6fd3-4191-b430-5b1672d7a345",
-    "version": [ 1, 16, 0 ],
+    "version": [ 1, 16, 200 ],
     "min_engine_version": [ 1, 13, 0 ]
   },
   "modules": [
@@ -13,14 +13,14 @@
       "description": "A darker alternative to the vanilla user interface! Created by Offroaders123 for Minecraft Bedrock Edition",
       "type": "resources",
       "uuid": "6f1aa51c-5fe8-43dd-8895-21e6e718f3ba",
-      "version": [ 1, 16, 0 ]
+      "version": [ 1, 16, 200 ]
     }
   ],
   "metadata": {
     "authors": [
       "Offroaders123"
     ],
-    "url": "https://sites.google.com/view/the-melon-slice/home"
+    "url": "https://github.com/Offroaders123"
   }
 }
 

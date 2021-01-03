@@ -2,7 +2,8 @@
   "namespace": "debug_screen",
 
   "special_render": {
-    "type": "label"
+    "type": "label",
+    "text": ""
   },
   "content_panel": {
     "type": "panel"

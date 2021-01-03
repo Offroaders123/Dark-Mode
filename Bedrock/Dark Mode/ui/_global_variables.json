@@ -1,15 +1,15 @@
 {
-  //////// Text colors ////////
+  //////// Text Colors ////////
   "$generic_button_text_color": [ 1.0, 1.0, 1.0 ],
 
-  "$light_button_default_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$light_button_default_text_color": [ 0.667, 0.667, 0.667 ], //Edited
   "$light_button_hover_text_color": [ 1.0, 1.0, 1.0 ],
   "$light_button_pressed_text_color": [ 1.0, 1.0, 1.0 ],
   "$light_button_locked_text_color": [ 0.7, 0.7, 0.7 ],
 
-  "$light_toggle_default_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$light_toggle_default_text_color": [ 0.667, 0.667, 0.667 ], //Edited
   "$light_toggle_hover_text_color": [ 1.0, 1.0, 1.0 ],
-  "$light_toggle_checked_default_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$light_toggle_checked_default_text_color": [ 0.667, 0.667, 0.667 ], //Edited
   "$light_toggle_checked_hover_text_color": [ 1.0, 1.0, 1.0 ],
 
   "$dark_button_default_text_color": [ 1.0, 1.0, 1.0 ],
@@ -32,20 +32,20 @@
   "$dark_button_secondary_pressed_text_color": [ 0.7, 0.7, 0.7 ],
   "$dark_button_secondary_locked_text_color": [ 0.7, 0.7, 0.7 ],
 
-  "$title_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$pocket_title_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$title_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$pocket_title_text_color": [ 0.667, 0.667, 0.667 ], //Edited
 
   "$main_header_text_color": [ 1.0, 1.0, 1.0 ],
   "$sub_header_text_color": [ 1.0, 1.0, 1.0 ],
 
-  "$tab_unchecked_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_unchecked_hover_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_unchecked_locked_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_unchecked_locked_hover_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_hover_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_locked_text_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_locked_hover_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$tab_unchecked_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_unchecked_hover_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_unchecked_locked_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_unchecked_locked_hover_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_hover_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_locked_text_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_locked_hover_text_color": [ 0.667, 0.667, 0.667 ], //Edited
 
   "$tab_secondary_unchecked_text_color": [ 1.0, 1.0, 1.0 ],
   "$tab_secondary_unchecked_hover_text_color": [ 1.0, 1.0, 1.0 ],
@@ -56,14 +56,14 @@
   "$tab_secondary_checked_locked_text_color": [ 1.0, 1.0, 1.0 ],
   "$tab_secondary_checked_locked_hover_text_color": [ 1.0, 1.0, 1.0 ],
 
-  "$tab_unchecked_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_unchecked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_unchecked_locked_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_unchecked_locked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_locked_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
-  "$tab_checked_locked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$tab_unchecked_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_unchecked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_unchecked_locked_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_unchecked_locked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_locked_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
+  "$tab_checked_locked_hover_glyph_color": [ 0.667, 0.667, 0.667 ], //Edited
 
   "$item_stack_count_color": [ 1.0, 1.0, 1.0 ],
   "$selected_item_stack_count_color": [ 1.0, 1.0, 0.0 ],
@@ -85,7 +85,7 @@
   "$boss_name_text_color": [ 1.0, 1.0, 1.0 ],
 
   "$body_text_color": [ 1.0, 1.0, 1.0 ],
-  "$dark_body_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$dark_body_text_color": [ 0.667, 0.667, 0.667 ], //Edited
 
   "$dark_grid_item_text_color": [ 1.0, 1.0, 1.0 ],
   "$light_grid_item_text_color": [ 1.0, 1.0, 1.0 ],
@@ -101,7 +101,7 @@
   "$anvil_cost_success_text_color": [ 0.5, 1, 0.125 ],
   "$anvil_cost_fail_text_color": [ 1.0, 0.35, 0.35 ],
   "$smithing_table_cost_success_text_color": [ 0.5, 1, 0.125 ],
-  "$smithing_table_cost_fail_text_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$smithing_table_cost_fail_text_color": [ 0.667, 0.667, 0.667 ], //Edited
 
   "$gamepad_button_generic_text_color": [ 1.0, 1.0, 1.0 ],
   "$gamepad_a_button_text_color": [ 0.0, 1.0, 0.0 ],
@@ -156,8 +156,8 @@
 
   "$wtc_pack_desc_text_color": [ 0.75, 0.75, 0.75 ],
 
-  //////// Glyph colors ////////
-  "$light_glyph_default_color": [ 0.667, 0.667, 0.667 ], // Edited
+  //////// Glyph Colors ////////
+  "$light_glyph_default_color": [ 0.667, 0.667, 0.667 ], //Edited
   "$light_glyph_hover_color": [ 1.0, 1.0, 1.0 ],
   "$light_glyph_pressed_color": [ 1.0, 1.0, 1.0 ],
   "$light_glyph_locked_color": [ 0.7, 0.7, 0.7 ],
@@ -177,29 +177,29 @@
   "$dark_glyph_toggle_checked_default_color": [ 0.0, 0.0, 0.0 ],
   "$dark_glyph_toggle_checked_hover_color": [ 1.0, 1.0, 1.0 ],
 
-  //////// Border colors ////////
-  "$light_border_default_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$light_border_hover_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$light_border_pressed_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$light_border_locked_color": [ 0.0, 0.0, 0.0 ], // Edited
+  //////// Border Colors ////////
+  "$light_border_default_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$light_border_hover_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$light_border_pressed_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$light_border_locked_color": [ 0.0, 0.0, 0.0 ], //Edited
 
-  "$light_border_toggle_default_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$light_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ], // Edited
+  "$light_border_toggle_default_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$light_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ], //Edited
 
-  "$dark_border_default_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$dark_border_hover_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$dark_border_pressed_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$dark_border_locked_color": [ 0.0, 0.0, 0.0 ], // Edited
+  "$dark_border_default_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$dark_border_hover_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$dark_border_pressed_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$dark_border_locked_color": [ 0.0, 0.0, 0.0 ], //Edited
 
-  "$dark_border_toggle_default_color": [ 0.0, 0.0, 0.0 ], // Edited
-  "$dark_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ], // Edited
+  "$dark_border_toggle_default_color": [ 0.0, 0.0, 0.0 ], //Edited
+  "$dark_border_toggle_hover_color": [ 0.0, 0.0, 0.0 ], //Edited
 
   "$non_interact_border_color": [ 0.7, 0.7, 0.7 ],
   "$realms_plus_border_color": [ 0.4, 0.118, 0.459 ],
 
-  //////// Border colors ////////
+  //////// Border Colors ////////
   "$slider_default_border_color": [ 0.0, 0.0, 0.0 ],
-  "$slider_hover_border_color": [ 0.0, 0.0, 0.0 ], // Edited
+  "$slider_hover_border_color": [ 0.0, 0.0, 0.0 ], //Edited
 
   //////// Boss Health Bar /////////
   "$boss_health_bar_color": [ 1.0, 0.0, 1.0 ],
@@ -216,32 +216,32 @@
   //////// Jukebox Popup Text /////////
   "$jukebox_text_color": [ 1.0, 0.4, 0.7 ],
 
-  //////// Color format colors ////////
-  "$0_color_format": [ 0.0, 0.0, 0.0 ], // Black
-  "$1_color_format": [ 0.0, 0.0, 0.667 ], // Dark Blue
-  "$2_color_format": [ 0.0, 0.667, 0 ], // Dark Green
-  "$3_color_format": [ 0.0, 0.667, 0.667 ], // Dark Aqua
-  "$4_color_format": [ 0.667, 0.0, 0.0 ], // Dark Red
-  "$5_color_format": [ 0.667, 0.0, 0.667 ], // Dark Purple
-  "$6_color_format": [ 1.0, 0.667, 0.0 ], // Gold
+  //////// Color Format Colors ////////
+  "$0_color_format": [ 0.0, 0.0, 0.0 ],       // Black
+  "$1_color_format": [ 0.0, 0.0, 0.667 ],     // Dark Blue
+  "$2_color_format": [ 0.0, 0.667, 0 ],       // Dark Green
+  "$3_color_format": [ 0.0, 0.667, 0.667 ],   // Dark Aqua
+  "$4_color_format": [ 0.667, 0.0, 0.0 ],     // Dark Red
+  "$5_color_format": [ 0.667, 0.0, 0.667 ],   // Dark Purple
+  "$6_color_format": [ 1.0, 0.667, 0.0 ],     // Gold
   "$7_color_format": [ 0.667, 0.667, 0.667 ], // Gray
   "$8_color_format": [ 0.333, 0.333, 0.333 ], // Dark Gray
-  "$9_color_format": [ 0.333, 0.333, 1.0 ], // Blue
-  "$a_color_format": [ 0.333, 1.0, 0.333 ], // Green
-  "$b_color_format": [ 0.333, 1.0, 1.0 ], // Aqua
-  "$c_color_format": [ 1.0, 0.333, 0.333 ], // Red
-  "$d_color_format": [ 1.0, 0.333, 1.0 ], // Light Purple
-  "$e_color_format": [ 1.0, 1.0, 0.333 ], // Yellow
-  "$f_color_format": [ 1.0, 1.0, 1.0 ], // White
+  "$9_color_format": [ 0.333, 0.333, 1.0 ],   // Blue
+  "$a_color_format": [ 0.333, 1.0, 0.333 ],   // Green
+  "$b_color_format": [ 0.333, 1.0, 1.0 ],     // Aqua
+  "$c_color_format": [ 1.0, 0.333, 0.333 ],   // Red
+  "$d_color_format": [ 1.0, 0.333, 1.0 ],     // Light Purple
+  "$e_color_format": [ 1.0, 1.0, 0.333 ],     // Yellow
+  "$f_color_format": [ 1.0, 1.0, 1.0 ],       // White
 
-  //////// Dropdown divider line color ////////
+  //////// Dropdown Divider Line Color ////////
   "$dropdown_divider_color": [ 0.0, 0.0, 0.0 ],
 
-  //////// Gradient colors ////////
+  //////// Gradient Colors ////////
   "$transparent_dark_gradient_start_color": [ 0.1, 0.1, 0.1, 1.0 ],
   "$transparent_dark_gradient_end_color": [ 0.1, 0.1, 0.1, 0.0 ],
 
-  //////// Transition times ////////
+  //////// Transition Times ////////
   "$transition_time_push_size": 0.6,
   "$transition_time_pop_size": 0.25,
   "$transition_time_push": 0.4,
@@ -250,30 +250,30 @@
   "$container_transition_time_pop": 0.4,
   "$loading_bar_transition": 3.0,
 
-  //////// Scoreboard colors ////////
+  //////// Scoreboard Colors ////////
   "$player_name_color": [ 1.0, 1.0, 1.0, 1.0 ],
   "$objective_title_color": [ 1.0, 1.0, 1.0, 1.0 ],
   "$player_score_color": [ 1.0, 0.0, 0.0, 1.0 ],
   "$player_list_score_color": [ 1.0, 1.0, 1.0, 1.0 ],
   "$player_list_rank_color": [ 1.0, 1.0, 1.0, 1.0 ],
 
-  //////// Panel colors ////////
+  //////// Panel Colors ////////
   "$dark_panel_color": [ 0.5, 0.5, 0.5, 1.0 ],
 
-  //////// Name Tag colors ////////
+  //////// Name Tag Colors ////////
   "$alert_label_background_color": [ 1.0, 0.862, 0.086, 0.5 ],
 
-  //////// Dropdown item background colors ////////
-  "$dropdown_radio_background_unchecked_color": [ 0.17, 0.17, 0.17 ], // Edited
-  "$dropdown_radio_background_checked_color": [ 0.22, 0.22, 0.22 ], // Edited
-  "$dropdown_radio_background_hover_color": [ 0.35, 0.35, 0.35 ], // Edited
+  //////// Dropdown Item Background Colors ////////
+  "$dropdown_radio_background_unchecked_color": [ 0.17, 0.17, 0.17 ], //Edited
+  "$dropdown_radio_background_checked_color": [ 0.22, 0.22, 0.22 ], //Edited
+  "$dropdown_radio_background_hover_color": [ 0.35, 0.35, 0.35 ], //Edited
 
-  //////// Chemistry colors ////////
+  //////// Chemistry Colors ////////
   "$proton_color": [ 0.321, 0.486, 0.886, 1.0 ],
   "$electron_color": [ 0.886, 0.4, 0.321, 1.0 ],
   "$neutron_color": [ 0.894, 0.698, 0.341, 1.0 ],
 
-  //////// Store colors ////////
+  //////// Store Colors ////////
   "$coin_color": [ 0.87, 0.84, 0.02, 1.0 ],
   "$store_author_text_color": [ 0.7, 0.7, 0.7 ],
   "$store_realms_text_color": [ 0.356, 0.223, 0.537 ],
@@ -287,14 +287,16 @@
   "$store_dark_grey_text_color": [ 0.3, 0.3, 0.3 ],
   "$store_light_grey_text_color": [ 0.7, 0.7, 0.7 ],
   "$coin_bonus_price_color": [ 0.140625, 0.25, 0.3046875 ],
+  "$carousel_unselected": [ 0.208, 0.208, 0.208 ],
+  "$carousel_selected": [ 0.118, 0.561, 0.263 ],
 
-  //////// Trade colors ////////
+  //////// Trade Colors ////////
   "$trade_tier_name_color": [ 1.0, 1.0, 1.0 ],
   "$trade_tier_name_locked_color": [ 0.5, 0.5, 0.5 ],
   "$trade_lock_color": [ 0.0, 0.0, 0.0 ],
   "$enchantment_button_default_text_color": [ 1.0, 0.8, 1.0 ],
 
-  //////// Nested button variables ////////
+  //////// Nested Button Variables ////////
   "$nested_default_alpha": 1.0,
   "$nested_default_color": [ 1.0, 1.0, 1.0 ],
 
@@ -321,14 +323,14 @@
   "$nested_one_pixel_padding": [ "100%sm", 1 ],
   "$nested_no_padding": [ "100%sm", 0 ],
 
-  // rarity colors
+  //////// Rarity Colors ////////
   "$rarity_common_bg_color": [ 0.43, 0.43, 0.43, 0.4 ],
   "$rarity_uncommon_bg_color": [ 0.33, 0.66, 0.42, 0.4 ],
   "$rarity_rare_bg_color": [ 0.10, 0.25, 0.61, 0.4 ],
   "$rarity_epic_bg_color": [ 0.36, 0.18, 0.40, 0.4 ],
   "$rarity_legendary_bg_color": [ 0.36, 0.32, 0.06, 0.4 ],
 
-  //////// Dressing Room colors ////////
+  //////// Dressing Room Colors ////////
   "$dressing_room_sale_banner_text_color": [ 0, 0, 0 ],
   "$dressing_room_bottom_section_color": [ 0.1294, 0.1294, 0.1294 ],
   "$dressing_room_bottom_section_mid_bar": [ 0.702, 0.8392, 0.8588 ],
@@ -343,8 +345,9 @@
   "$dressing_room_full_screen_popup_background_alpha": 0.6,
   "$dressing_room_profile_title_bar_alpha": 0.075,
   "$dressing_room_panel_alpha": 0.2,
-  "$dressing_room_sub_category_seperator_color": [ 0.667, 0.667, 0.667 ], // Edited
+  "$dressing_room_sub_category_seperator_color": [ 0.667, 0.667, 0.667 ], //Edited
   "$dressing_room_subcategory_button_hover_color": [ 0.506, 0.58, 0.596 ],
+
   //////// Dressing Room Skin Picker colors ////////
   "$dressing_room_skin_picker_selected_color": [ 0.55, 0.95, 1.0 ],
   "$dressing_room_skin_picker_selected_pressed_color": [ 0.4125, 0.7125, 0.75 ],
