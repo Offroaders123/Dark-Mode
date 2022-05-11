@@ -1,125 +1,15 @@
 {
   "namespace": "hud",
 
-  "item_name_text": {
-    "type": "panel",
-    "size": [ "100px", "10px" ],
-    "controls": [
-      {
-        "item_text_label": {
-          "type": "label",
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "text": "#text",
-          "color": "$tool_tip_text",
-          "shadow": true,
-          "text_alignment": "center",
-          "layer": 31,
-          "alpha": "@hud.anim_item_name_text_alpha",
-          "bindings": [
-            {
-              "binding_name": "#item_text",
-              "binding_name_override": "#text"
-            }
-          ]
-        }
-      }
-    ]
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar": {
+    "texture": "textures/ui/experience_bar_empty",
+    "uv_size": [ "100%", "100%" ]
   },
-  "exp_progress_bar_and_hotbar": {
-    "type": "panel",
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "offset": "$xp_control_offset",
-    "size": [ "100%c", "31px" ],
-    "controls": [
-      {
-        "resizing_xp_bar_with_hotbar": {
-          "type": "panel",
-          "size": [ "100%c", "5px" ],
-          "controls": [
-            {
-              "empty_progress_bar@empty_progress_bar": {
-                "size": [ "100%c", "5px" ],
-                "texture": "textures/ui/experience_bar_empty_modern",
-                "uv_size": [ "100%", "100%" ],
-                "layer": 1,
-                "controls": [
-                  {
-                    "full_progress_bar@full_progress_bar": {
-                      "size": [ "100%c + 10px", "5px" ],
-                      "texture": "textures/ui/experience_bar_full_modern",
-                      "uv_size": [ "100%", "100%" ],
-                      "layer": 2,
-                      "controls": [
-                        {
-                          "progress_bar_nub@progress_bar_nub": {
-                            "size": [ "100%c - 10px", "5px" ],
-                            "max_size": [ "172px", "5px" ],
-                            "layer": 3,
-                            "controls": [
-                              {
-                                "hotbar@hotbar_chooser": {
-                                  "offset": [ "4px", "16px" ]
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "progress_text_label@progress_text_label": {
-                "offset": [ 0, 0 ],
-                "layer": 7
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#is_not_creative_mode",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "hotbar@hotbar_chooser": {
-          "offset": [ "4px", "16px" ],
-          "bindings": [
-            {
-              "binding_name": "#is_creative_mode",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "item_text_factory": {
-          "type": "factory",
-          "size": [ "100px", "10px" ],
-          "control_ids": {
-            "survival_item_text": "@hud.survival_item_name_text",
-            "survival_item_text_above_interact_button": "@hud.survival_above_interact_button_item_text",
-            "survival_jukebox_text": "@hud.survival_jukebox_popup_text",
-            "survival_jukebox_text_above_interact_button": "@hud.survival_jukebox_above_interact_button_popup_text",
-            "creative_item_text": "@hud.creative_item_name_text",
-            "create_item_text_above_interact_button": "@hud.creative_above_interact_button_item_text",
-            "creative_jukebox_text": "@hud.creative_jukebox_popup_text",
-            "creative_jukebox_text_above_interact_button": "@hud.creative_jukebox_above_interact_button_popup_text"
-          }
-        }
-      }
-    ]
+  "exp_progress_bar_and_hotbar/resizing_xp_bar_with_hotbar/empty_progress_bar/full_progress_bar": {
+    "texture": "textures/ui/experience_bar_full",
+    "uv_size": [ "100%", "100%" ]
   },
-  "start_cap_image": {
-    "alpha": 0.65
-  },
-  "hotbar_slot_image": {
-    "alpha": 0.65
+  "item_name_text_root/item_text_aligner/item_text_control/item_text_label": {
+    "shadow": true
   }
 }
