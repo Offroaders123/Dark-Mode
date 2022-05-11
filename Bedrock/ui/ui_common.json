@@ -5,6 +5,7 @@
     "size": "$root_panel_size",
     "$root_panel_size|default": [ "176px", "166px" ]
   },
+
   "common_panel": {
     "$use_modern_close_button|default": false
   },
@@ -29,27 +30,29 @@
       }
     ]
   },
+
   "modern_close_button@close_button": {
     "size": [ "16px", "16px" ],
     "$close_button_panel_size|default": [ "9px", "9px" ],
     "controls": [
       {
-        "default@common.close_button_panel": {
+        "default@close_button_panel": {
           "$close_button_texture": "textures/ui/close_button_default_modern"
         }
       },
       {
-        "hover@common.close_button_panel": {
+        "hover@close_button_panel": {
           "$close_button_texture": "textures/ui/close_button_hover_modern"
         }
       },
       {
-        "pressed@common.close_button_panel": {
+        "pressed@close_button_panel": {
           "$close_button_texture": "textures/ui/close_button_pressed_modern"
         }
       }
     ]
   },
+
   "inventory_panel_bottom_half_with_label": {
     "$inventory_label_offset|default": [ "8px", "-2px" ]
   },
@@ -62,6 +65,7 @@
   "hotbar_grid_template": {
     "offset": [ 0, "-7px" ]
   },
+
   "dirt_background": {
     "texture": "textures/ui/background_overworld"
   },
