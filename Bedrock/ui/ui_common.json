@@ -2,109 +2,29 @@
   "namespace": "common",
 
   "root_panel": {
-    "type": "input_panel",
-    "anchor_from": "center",
-    "anchor_to": "center",
     "size": "$root_panel_size",
-    "$root_panel_size|default": [ "176px", "166px" ],
-    "layer": 1,
-    "button_mappings": [
-      {
-        "from_button_id": "button.menu_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.menu_ok",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      },
-      {
-        "from_button_id": "button.controller_secondary_select",
-        "to_button_id": "button.container_reset_held",
-        "mapping_type": "pressed"
-      }
-    ]
+    "$root_panel_size|default": [ "176px", "166px" ]
   },
   "common_panel": {
-    "type": "panel",
-    "$dialog_background|default": "common.dialog_background_opaque",
-    "$show_close_button|default": true,
-    "$use_compact_close_button|default": false,
-    "$use_modern_close_button|default": false,//EDITED
-    "$close_button_visible_binding_name|default": "#close_button_visible",
-    "$close_button_offset|default": [ 0, 0 ],
-    "$close_button_layer|default": 2,
-    "$show_divider|default": false,
-    "$divider_offset|default": [ "42.5%", "22px" ],
-    "$divider_visible_binding_name|default": "",
-    "$divider_visible_binding_type|default": "none",
-    "$divider_size|default": [ "5px", "100% - 29px" ],
-    "controls": [
+    "$use_modern_close_button|default": false
+  },
+  "common_panel/close_button_holder/close": {
+    "ignored": "($use_compact_close_button or $use_modern_close_button)"
+  },
+  "common_panel/close_button_holder/compact_close": {
+    "ignored": "(not $use_compact_close_button or $use_modern_close_button)"
+  },
+  "common_panel/close_button_holder": {
+    "modifications": [
       {
-        "bg_image@$dialog_background": {
-          "layer": 1
-        }
-      },
-      {
-        "dialog_divider@common.dialog_divider": {
-          "visible": "$show_divider",
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": "$divider_offset",
-          "size": "$divider_size",
-          "bindings": [
-            {
-              "binding_name": "$divider_visible_binding_name",
-              "binding_name_override": "#visible",
-              "binding_type": "$divider_visible_binding_type"
-            }
-          ]
-        }
-      },
-      {
-        "close_button_holder": {
-          "type": "panel",
-          "ignored": "(not $show_close_button)",
-          "controls": [
-            {
-              "close@common.close_button": {
-                "offset": "$close_button_offset",
-                "layer": "$close_button_layer",
-                "ignored": "($use_compact_close_button or $use_modern_close_button)"
-              }
-            },
-            {
-              "compact_close@common.compact_close_button": {
-                "offset": "$close_button_offset",
-                "layer": "$close_button_layer",
-                "ignored": "(not $use_compact_close_button or $use_modern_close_button)"
-              }
-            },
-            {
-              "modern_close@common.modern_close_button": {
-                "offset": "$close_button_offset",
-                "layer": "$close_button_layer",
-                "ignored": "(not $use_modern_close_button or $use_compact_close_button)"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "$close_button_visible_binding_name",
-              "binding_name_override": "#visible"
-            }
-          ]
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "modern_close@modern_close_button": {
+            "offset": "$close_button_offset",
+            "layer": "$close_button_layer",
+            "ignored": "(not $use_modern_close_button or $use_compact_close_button)"
+          }
         }
       }
     ]
@@ -130,66 +50,22 @@
       }
     ]
   },
-  "inventory_panel_bottom_half_with_label@inventory_panel_bottom_half": {
-    "anchor_from": "bottom_left",
-    "anchor_to": "bottom_left",
-    "size": [ "100%", "93px" ],
-    "$inventory_label_offset|default": [ "8px", "-2px" ],
-    "controls": [
-      { "inventory_panel@inventory_panel": {} },
-      {
-        "inventory_label@section_heading_label": {
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "offset": "$inventory_label_offset",
-          "layer": 2,
-          "text": "container.inventory"
-        }
-      }
-    ]
+  "inventory_panel_bottom_half_with_label": {
+    "$inventory_label_offset|default": [ "8px", "-2px" ]
   },
-  "inventory_panel": {
-    "type": "panel",
-    "size": [ "88px", "83px" ],
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "controls": [
-      {
-        "inventory_grid": {
-          "type": "grid",
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle",
-          "offset": [ 0, "-29px" ],
-          "size": [ "162px", "54px" ],
-          "grid_dimensions": [ 9, 3 ],
-          "grid_item_template": "common.grid_item_for_inventory",
-          "collection_name": "inventory_items"
-        }
-      }
-    ]
+  "inventory_panel_bottom_half_with_label/inventory_label": {
+    "offset": "$inventory_label_offset"
+  },
+  "inventory_panel/inventory_grid": {
+    "offset": [ 0, "-29px" ]
   },
   "hotbar_grid_template": {
-    "type": "grid",
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle",
-    "size": [ "162px", "18px" ],
-    "offset": [ 0, "-7px" ],
-    "grid_dimensions": [ 9, 1 ],
-    "grid_item_template": "common.grid_item_for_hotbar",
-    "collection_name": "hotbar_items"
+    "offset": [ 0, "-7px" ]
   },
   "dirt_background": {
-    "type": "image",
-    "tiled": true,
-    "texture": "textures/ui/background_overworld",
-    "layer": 1,
-    "ignored": "($is_holographic and not $is_living_room_mode)"
+    "texture": "textures/ui/background_overworld"
   },
   "portal_background": {
-    "type": "image",
-    "tiled": true,
-    "texture": "textures/ui/background_realms",
-    "layer": 1,
-    "ignored": "$is_holographic"
+    "texture": "textures/ui/background_realms"
   }
 }
