@@ -67,9 +67,9 @@
   },
 
   "dirt_background": {
-    "texture": "textures/ui/background_overworld"
+    "texture": "textures/ui/loading_background_overworld"
   },
   "portal_background": {
-    "texture": "textures/ui/background_realms"
+    "texture": "textures/ui/loading_background_realms"
   }
 }
