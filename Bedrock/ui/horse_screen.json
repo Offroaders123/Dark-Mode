@@ -17,12 +17,12 @@
     "close_on_player_hurt": "$close_on_player_hurt",
     "$close_on_player_hurt|default": false
   },
+
   "horse_panel": {
     "type": "panel",
     "controls": [
       {
         "root_panel@common.root_panel": {
-          "layer": 1,
           "controls": [
             {
               "common_panel@common.common_panel": {
@@ -31,7 +31,7 @@
               }
             },
             {
-              "header_title@common.section_heading_label": {
+              "heading_label@common.section_heading_label": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "offset": [ "8px", "5px" ],
@@ -210,6 +210,7 @@
       { "flying_item_renderer@common.flying_item_renderer": {} }
     ]
   },
+
   "horse_equipment_overlay": {
     "type": "image",
     "anchor_from": "top_left",
