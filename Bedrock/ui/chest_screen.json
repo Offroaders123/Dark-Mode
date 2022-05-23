@@ -58,7 +58,7 @@
               }
             },
             {
-              "heading_label@common.section_heading_label": {
+              "section_heading_label@common.section_heading_label": {
                 "offset": [ "8px", "5px" ],
                 "text": "$container_title",
                 "layer": 5
