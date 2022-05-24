@@ -1,7 +1,0 @@
-{
-  "namespace": "start",
-
-  "store_button_sale_banner/banner_label_padding/banner_label": {
-    "color": "$store_sales_banner_text_color"
-  }
-}
