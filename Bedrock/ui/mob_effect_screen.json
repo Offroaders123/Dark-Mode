@@ -28,84 +28,33 @@
       }
     ]
   },
+
   "mob_effect_panel": {
     "type": "panel",
-    "size": [ "50%", "80%" ],
     "controls": [
       {
-        "dialog_backdrop": {
-          "type": "image",
-          "offset": [ 0, "7px" ],
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": [ "90% - 16px", "90% - 30px" ],
-          "texture": "textures/ui/control",
-          "alpha": 0.8,
-          "layer": -1
-        }
-      },
-      {
-        "dialog_background": {
-          "type": "image",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": "$mob_effect_screen_size",
-          "texture": "textures/ui/dialog_background_hollow_3"
-        }
-      },
-      {
-        "dialog_header": {
-          "type": "panel",
-          "offset": [ 0, "-45% + 8px" ],
-          "anchor_from": "center",
-          "anchor_to": "top_middle",
-          "size": [ "default", "10px" ],
-          "layer": 4,
+        "root_panel@common.root_panel": {
           "controls": [
             {
-              "dialog_title": {
-                "type": "label",
-                "size": [ "default", "10px" ],
+              "common_panel@common.common_panel": {
+                "$dialog_background": "common.dialog_background_hollow_3"
+              }
+            },
+            {
+              "section_heading_label@common.section_heading_label": {
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [ 0, "8px" ],
                 "text": "key.mobEffects",
-                "color": "$title_text_color"
+                "layer": 5
               }
-            }
-          ]
-        }
-      },
-      {
-        "dialog_close_button_container": {
-          "type": "panel",
-          "anchor_from": "center",
-          "anchor_to": "top_right",
-          "offset": [ "45%", "-45%" ],
-          "layer": 4,
-          "controls": [
+            },
             {
-              "dialog_close_button@common.close_button": {
-                "$pressed_button_name": "button.menu_continue"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "dialog_content_container": {
-          "type": "panel",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "offset": [ 0, "5px" ],
-          "size": [ "90% - 14px", "90% - 26px" ],
-          "clips_children": true,
-          "controls": [
-            {
-              "dialog_content@common.scrolling_panel": {
-                "offset": [ 0, "4px" ],
-                "anchor_from": "center",
-                "anchor_to": "center",
-                "size": [ "100% - 2px", "100% - 2px" ],
-                "$scrolling_pane_size": [ "100%", "100% - 3px" ],
-                "$scroll_size": [ "6px", "100% - 4px" ],
+              "mob_effect_content@common.scrolling_panel": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [ "8px", "23px" ],
+                "size": [ "100% - 16px", "100% - 31px" ],
                 "$show_background": false,
                 "$always_handle_scrolling": true,
                 "$scrolling_content": "mob_effect.effect_grid_container"
@@ -113,9 +62,37 @@
             }
           ]
         }
+      },
+      {
+        "mob_effect_gamepad_helpers@common.gamepad_helpers": {
+          "$a_b_stack_panel_orientation|default": "horizontal",
+          "$a_b_stack_panel_size|default": [ "100%c", "100%" ],
+          "$helper_b_control|default": "common.gamepad_helper_b",
+          "controls": [
+            {
+              "buffer_panel_left": {
+                "type": "panel",
+                "size": [ 10, 0 ]
+              }
+            },
+            {
+              "left_buttons": {
+                "type": "stack_panel",
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": "$a_b_stack_panel_size",
+                "orientation": "$a_b_stack_panel_orientation",
+                "controls": [
+                  { "gamepad_helper_b@$helper_b_control": {} }
+                ]
+              }
+            }            
+          ]
+        }
       }
     ]
   },
+
   "effect_grid_container": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
@@ -125,7 +102,6 @@
           "type": "grid",
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "offset": [ 0, 0 ],
           "size": [ "100%", "default" ],
           "grid_item_template": "mob_effect.effect_grid_item_template",
           "grid_dimension_binding": "#mob_effect_grid_size",
@@ -139,6 +115,7 @@
       }
     ]
   },
+
   "effect_grid_item_template": {
     "type": "panel",
     "size": [ "100%", "30px" ],
