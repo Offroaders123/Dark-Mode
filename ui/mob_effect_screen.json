@@ -1,7 +1,7 @@
 {
   "namespace": "mob_effect",
 
-  "mob_effect_screen@common.base_screen": {
+  "mob_effect_screen@common.inventory_screen_common": {
     "$screen_content": "mob_effect.mob_effect_panel",
     "variables": [
       {
@@ -13,6 +13,7 @@
         "$close_on_player_hurt": true
       }
     ],
+    "$gamepad_cursor": false,
     "close_on_player_hurt": "$close_on_player_hurt",
     "$close_on_player_hurt|default": false,
     "button_mappings": [
