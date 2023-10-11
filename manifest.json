@@ -1,23 +1,23 @@
 {
   "format_version": 2,
-
   "header": {
     "name": "§9Dark Mode",
-    "description": "A darker alternative to the vanilla user interface!\nCreated by Offroaders123",
+    "description": "A dark theme for the vanilla user interface!\nCreated by Offroaders123",
     "uuid": "1ad37131-6fd3-4191-b430-5b1672d7a345",
-    "version": [ 1, 19, 0 ],
-    "min_engine_version": [ 1, 13, 0 ]
+    "version": [ 1, 20, 30 ],
+    "min_engine_version": [ 1, 20, 30 ]
   },
   "modules": [
     {
-      "description": "A darker alternative to the vanilla user interface!\nCreated by Offroaders123",
+      "description": "A dark theme for the vanilla user interface!\nCreated by Offroaders123",
       "type": "resources",
       "uuid": "6f1aa51c-5fe8-43dd-8895-21e6e718f3ba",
-      "version": [ 1, 19, 0 ]
+      "version": [ 1, 20, 30 ]
     }
   ],
   "metadata": {
     "authors": ["Offroaders123"],
+    "license": "MIT",
     "url": "https://github.com/Offroaders123"
   }
 }
