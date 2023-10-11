@@ -5,7 +5,7 @@
     "description": "A dark theme for the vanilla user interface!\nCreated by Offroaders123",
     "uuid": "1ad37131-6fd3-4191-b430-5b1672d7a345",
     "version": [ 1, 20, 30 ],
-    "min_engine_version": [ 1, 20, 30 ]
+    "min_engine_version": [ 1, 19, 0 ]
   },
   "modules": [
     {
